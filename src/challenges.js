@@ -38,12 +38,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
   // seu código aqui
-  let biggerNumber = numbers[0];
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] > biggerNumber) {
-      biggerNumber = numbers[index];
-    }
-  }
+  let biggerNumber = Math.max(...numbers);
   let counter = 0;
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] === biggerNumber) {
@@ -57,11 +52,8 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   // Realizado consulta para a lógica deste requisito no vídeo, Link: https://www.youtube.com/watch?v=F26OCFOvMPU .
-  if ((Math.abs(mouse - cat1)) < (Math.abs(mouse - cat2))) {
-    return 'cat1';
-  } else if ((Math.abs(mouse - cat1)) > (Math.abs(mouse - cat2))) {
-    return 'cat2';
-  }
+  if ((Math.abs(mouse - cat1)) < (Math.abs(mouse - cat2))) return 'cat1';
+  if ((Math.abs(mouse - cat1)) > (Math.abs(mouse - cat2))) return 'cat2';
   return 'os gatos trombam e o rato foge';
 }
 
