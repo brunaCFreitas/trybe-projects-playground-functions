@@ -85,11 +85,30 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(phrase) {
   // seu código aqui
+  let newPhrase = phrase;
+
+  newPhrase = newPhrase.replace(/a/gi, '1');
+  newPhrase = newPhrase.replace(/e/gi, '2');
+  newPhrase = newPhrase.replace(/i/gi, '3');
+  newPhrase = newPhrase.replace(/o/gi, '4');
+  newPhrase = newPhrase.replace(/u/gi, '5');
+
+  return newPhrase;
 }
-function decode() {
+
+function decode(phrase) {
   // seu código aqui
+  let newPhrase = phrase;
+
+  newPhrase = newPhrase.replace(/1/gi, 'a');
+  newPhrase = newPhrase.replace(/2/gi, 'e');
+  newPhrase = newPhrase.replace(/3/gi, 'i');
+  newPhrase = newPhrase.replace(/4/gi, 'o');
+  newPhrase = newPhrase.replace(/5/gi, 'u');
+
+  return newPhrase;
 }
 
 // Desafio 10
