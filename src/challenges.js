@@ -52,8 +52,14 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   // Realizado consulta para a lógica deste requisito no vídeo, Link: https://www.youtube.com/watch?v=F26OCFOvMPU .
-  if ((Math.abs(mouse - cat1)) < (Math.abs(mouse - cat2))) return 'cat1';
-  if ((Math.abs(mouse - cat1)) > (Math.abs(mouse - cat2))) return 'cat2';
+  const distanceFromCat1 = Math.abs(mouse - cat1);
+  const distanceFromCat2 = Math.abs(mouse - cat2);
+  if (distanceFromCat1 > distanceFromCat2) {
+    return 'cat2';
+  }
+  if (distanceFromCat1 < distanceFromCat2) {
+    return 'cat1';
+  }
   return 'os gatos trombam e o rato foge';
 }
 
