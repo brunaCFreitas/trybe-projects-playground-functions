@@ -40,8 +40,8 @@ function highestCount(numbers) {
   // seu código aqui
   let biggerNumber = Math.max(...numbers);
   let counter = 0;
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] === biggerNumber) {
+  for (const number of numbers) {
+    if (number === biggerNumber) {
       counter += 1;
     }
   }
