@@ -103,11 +103,11 @@ function encode(phrase) {
   // seu código aqui
   let newPhrase = phrase;
 
-  newPhrase = newPhrase.replace(/a/gi, '1');
-  newPhrase = newPhrase.replace(/e/gi, '2');
-  newPhrase = newPhrase.replace(/i/gi, '3');
-  newPhrase = newPhrase.replace(/o/gi, '4');
-  newPhrase = newPhrase.replace(/u/gi, '5');
+  newPhrase = newPhrase.replace(/a/g, '1');
+  newPhrase = newPhrase.replace(/e/g, '2');
+  newPhrase = newPhrase.replace(/i/g, '3');
+  newPhrase = newPhrase.replace(/o/g, '4');
+  newPhrase = newPhrase.replace(/u/g, '5');
 
   return newPhrase;
 }
@@ -116,11 +116,11 @@ function decode(phrase) {
   // seu código aqui
   let newPhrase = phrase;
 
-  newPhrase = newPhrase.replace(/1/gi, 'a');
-  newPhrase = newPhrase.replace(/2/gi, 'e');
-  newPhrase = newPhrase.replace(/3/gi, 'i');
-  newPhrase = newPhrase.replace(/4/gi, 'o');
-  newPhrase = newPhrase.replace(/5/gi, 'u');
+  newPhrase = newPhrase.replace(/1/g, 'a');
+  newPhrase = newPhrase.replace(/2/g, 'e');
+  newPhrase = newPhrase.replace(/3/g, 'i');
+  newPhrase = newPhrase.replace(/4/g, 'o');
+  newPhrase = newPhrase.replace(/5/g, 'u');
 
   return newPhrase;
 }
