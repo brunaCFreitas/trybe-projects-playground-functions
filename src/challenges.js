@@ -73,7 +73,6 @@ function fizzBuzz(array) {
     }
   }
   return newArray;
-
 }
 
 // Desafio 9
@@ -104,18 +103,18 @@ function decode(phrase) {
 }
 
 // Desafio 10
-function techList(list, name) {
+function techList(list, namePerson) {
   // seu código aqui
-  if (list.length === 0 || name === '') {
+  if (list.length === 0 || namePerson === '') {
     return 'Vazio!';
-  };
+  }
   let orderedTechnologies = list.sort();
   let technologyWithName = [];
 
   for (let index = 0; index < orderedTechnologies.length; index += 1) {
     technologyWithName.push({
       tech: orderedTechnologies[index],
-      name: name,
+      name: namePerson,
     });
   }
   return technologyWithName;
