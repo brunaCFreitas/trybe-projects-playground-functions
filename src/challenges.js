@@ -120,18 +120,18 @@ function decode(phrase) {
 }
 
 // Desafio 10
-function techList(list, namePerson) {
+function techList(list, name) {
   // seu código aqui
-  if (list.length === 0 || namePerson === '') {
+  if (list.length === 0 || name === '') {
     return 'Vazio!';
   }
   let orderedTechnologies = list.sort();
   let technologyWithName = [];
 
-  for (let index = 0; index < orderedTechnologies.length; index += 1) {
+  for (const tech of orderedTechnologies) {
     technologyWithName.push({
-      tech: orderedTechnologies[index],
-      name: namePerson,
+      tech,
+      name,
     });
   }
   return technologyWithName;
