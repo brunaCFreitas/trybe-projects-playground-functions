@@ -54,9 +54,15 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-
+  // Realizado consulta para a lógica deste requisito no vídeo, Link: https://www.youtube.com/watch?v=F26OCFOvMPU .
+  if ((Math.abs(mouse - cat1)) < (Math.abs(mouse - cat2))) {
+    return 'cat1';
+  } else if ((Math.abs(mouse - cat1)) > (Math.abs(mouse - cat2))) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
