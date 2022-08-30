@@ -49,8 +49,39 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function checkFirstCondition(a, b, c) {
+  if (a > (b + c)) {
+    return false;
+  }
+  if (b > (a + c)) {
+    return false;
+  }
+  if (c > (a + b)) {
+    return false;
+  }
+  return true;
+}
+function checkSecondCondition(a, b, c) {
+  if (a < Math.abs(b - c)) {
+    return false;
+  }
+  if (b < Math.abs(a - c)) {
+    return false;
+  }
+  if (c < Math.abs(b - a)) {
+    return false;
+  }
+  return true;
+}
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  if (!checkFirstCondition(lineA, lineB, lineC)) {
+    return false;
+  }
+  if (!checkSecondCondition(lineA, lineB, lineC)) {
+    return false;
+  }
+  return true;
 }
 
 // Desafio 13
