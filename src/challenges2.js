@@ -85,8 +85,13 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(input) {
   // seu código aqui
+  const totalSum = [...input.matchAll(/\d+/g)]
+    .map((result) => parseInt(result[0], 10))
+    .reduce((sum, curr) => sum + curr, 0);
+
+  return `${totalSum} copo${totalSum > 1 ? 's' : ''} de água`;
 }
 
 module.exports = {
